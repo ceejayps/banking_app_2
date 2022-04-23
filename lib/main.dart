@@ -9,8 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,16 +23,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -47,24 +35,18 @@ class _MyHomePageState extends State<MyHomePage> {
   List pin = [];
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 76, 97, 190),
+      backgroundColor: const Color.fromARGB(255, 76, 97, 190),
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(
+        leading: const IconButton(
             onPressed: null,
             icon: Icon(
               Icons.arrow_back,
               color: Colors.white,
             )),
-        backgroundColor: Color.fromARGB(255, 76, 97, 190),
-        title: Text(''),
+        backgroundColor: const Color.fromARGB(255, 76, 97, 190),
+        title: const Text(''),
       ),
       body: Center(
         child: Padding(
@@ -75,16 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Enter the PIN",
                   style: TextStyle(
                       color: Color.fromARGB(255, 208, 205, 205),
                       fontSize: 30,
                       fontWeight: FontWeight.w400),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: TextField(),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -95,8 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 35,
                           height: 2,
                           color: pin.length >= 1
-                              ? Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 254, 254),
+                              ? const Color.fromARGB(255, 208, 205, 205)
+                              : const Color.fromARGB(255, 255, 254, 254),
                         )),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -104,8 +82,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 35,
                           height: 2,
                           color: pin.length >= 2
-                              ? Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 254, 254),
+                              ? const Color.fromARGB(255, 208, 205, 205)
+                              : const Color.fromARGB(255, 255, 254, 254),
                         )),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -113,10 +91,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 35,
                           height: 2,
                           color: pin.length >= 3
-                              ? Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 254, 254),
+                              ? const Color.fromARGB(255, 208, 205, 205)
+                              : const Color.fromARGB(255, 255, 254, 254),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Padding(
@@ -125,13 +103,12 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 35,
                           height: 2,
                           color: pin.length >= 4
-                              ? Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 254, 254),
+                              ? const Color.fromARGB(255, 208, 205, 205)
+                              : const Color.fromARGB(255, 255, 254, 254),
                         )),
                   ],
                 ),
-                Container(),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                   height: 80,
                 ),
@@ -140,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "1",
@@ -151,13 +128,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "2",
@@ -168,13 +145,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "3",
@@ -187,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ))
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                   height: 10,
                 ),
@@ -196,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "4",
@@ -207,13 +184,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "5",
@@ -224,13 +201,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "6",
@@ -248,7 +225,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "7",
@@ -259,13 +236,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "8",
@@ -276,7 +253,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
@@ -290,7 +267,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                           print(pin);
                         },
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "9",
@@ -303,7 +280,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ))
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                   height: 10,
                 ),
@@ -320,7 +297,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                           print(pin);
                         },
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                               child: Icon(
                             Icons.backspace,
@@ -329,7 +306,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
@@ -343,7 +320,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                           print(pin);
                         },
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                             child: Text(
                               "0",
@@ -354,13 +331,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 40,
                           width: 20,
                         )),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                       height: 10,
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: SizedBox(
+                        child: const SizedBox(
                           child: Center(
                               child: Icon(
                             Icons.check,
