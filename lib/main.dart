@@ -116,7 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("1");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -133,7 +141,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("2");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -150,7 +166,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("3");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -172,7 +196,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("4");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -189,7 +221,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("5");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -206,7 +246,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("6");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -224,7 +272,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("7");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
@@ -241,7 +297,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("8");
+                            }
+                          });
+
+                          print(pin);
+                        },
                         child: const SizedBox(
                           child: Center(
                             child: Text(
