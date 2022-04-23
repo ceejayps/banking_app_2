@@ -32,6 +32,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Color typed = Colors.white;
   Color empty = Colors.white38;
+  BoxDecoration dotborder =
+      BoxDecoration(borderRadius: BorderRadius.circular(60));
   List pin = [];
   @override
   Widget build(BuildContext context) {
@@ -60,9 +62,53 @@ class _MyHomePageState extends State<MyHomePage> {
                 const Text(
                   "Enter the PIN",
                   style: TextStyle(
-                      color: Color.fromARGB(255, 208, 205, 205),
+                      color: Color.fromARGB(255, 255, 255, 255),
                       fontSize: 30,
                       fontWeight: FontWeight.w400),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 21),
+                        child: Container(
+                          width: 10,
+                          height: 10,
+                          color: pin.length >= 1
+                              ? Color.fromARGB(255, 255, 255, 255)
+                              : Color.fromARGB(0, 255, 254, 254),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 21),
+                        child: Container(
+                          width: 10,
+                          height: 10,
+                          color: pin.length >= 2
+                              ? Color.fromARGB(255, 255, 255, 255)
+                              : Color.fromARGB(0, 255, 254, 254),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 21),
+                        child: Container(
+                          width: 10,
+                          height: 10,
+                          color: pin.length >= 3
+                              ? Color.fromARGB(255, 255, 255, 255)
+                              : Color.fromARGB(0, 255, 254, 254),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 21),
+                        child: Container(
+                          width: 10,
+                          height: 10,
+                          color: pin.length >= 4
+                              ? Color.fromARGB(255, 255, 255, 255)
+                              : Color.fromARGB(0, 255, 254, 254),
+                        )),
+                  ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -74,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 2,
                           color: pin.length >= 1
                               ? const Color.fromARGB(255, 208, 205, 205)
-                              : const Color.fromARGB(255, 255, 254, 254),
+                              : Color.fromARGB(255, 255, 255, 255),
                         )),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -83,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 2,
                           color: pin.length >= 2
                               ? const Color.fromARGB(255, 208, 205, 205)
-                              : const Color.fromARGB(255, 255, 254, 254),
+                              : Color.fromARGB(255, 255, 255, 255),
                         )),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -92,11 +138,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 2,
                           color: pin.length >= 3
                               ? const Color.fromARGB(255, 208, 205, 205)
-                              : const Color.fromARGB(255, 255, 254, 254),
+                              : Color.fromARGB(255, 255, 255, 255),
                         )),
-                    const SizedBox(
-                      width: 5,
-                    ),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
@@ -104,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 2,
                           color: pin.length >= 4
                               ? const Color.fromARGB(255, 208, 205, 205)
-                              : const Color.fromARGB(255, 255, 254, 254),
+                              : Color.fromARGB(255, 255, 255, 255),
                         )),
                   ],
                 ),
