@@ -32,11 +32,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Color typed = Colors.white;
   Color empty = Colors.white38;
-  BoxDecoration dotborder =
-      BoxDecoration(borderRadius: BorderRadius.circular(60));
+
   List pin = [];
+
   @override
   Widget build(BuildContext context) {
+    BoxDecoration dotborder = BoxDecoration(
+      borderRadius: BorderRadius.circular(60),
+      color: pin.length >= 1
+          ? Color.fromARGB(255, 255, 255, 255)
+          : Color.fromARGB(0, 255, 254, 254),
+    );
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 76, 97, 190),
       appBar: AppBar(
@@ -67,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontWeight: FontWeight.w400),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 50,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -75,39 +81,47 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
                         child: Container(
-                          width: 10,
-                          height: 10,
-                          color: pin.length >= 1
-                              ? Color.fromARGB(255, 255, 255, 255)
-                              : Color.fromARGB(0, 255, 254, 254),
-                        )),
+                            width: 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60),
+                              color: pin.length >= 1
+                                  ? Color.fromARGB(255, 255, 255, 255)
+                                  : Color.fromARGB(0, 255, 254, 254),
+                            ))),
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
                         child: Container(
-                          width: 10,
-                          height: 10,
-                          color: pin.length >= 2
-                              ? Color.fromARGB(255, 255, 255, 255)
-                              : Color.fromARGB(0, 255, 254, 254),
-                        )),
+                            width: 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60),
+                              color: pin.length >= 2
+                                  ? Color.fromARGB(255, 255, 255, 255)
+                                  : Color.fromARGB(0, 255, 254, 254),
+                            ))),
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
                         child: Container(
-                          width: 10,
-                          height: 10,
-                          color: pin.length >= 3
-                              ? Color.fromARGB(255, 255, 255, 255)
-                              : Color.fromARGB(0, 255, 254, 254),
-                        )),
+                            width: 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60),
+                              color: pin.length >= 3
+                                  ? Color.fromARGB(255, 255, 255, 255)
+                                  : Color.fromARGB(0, 255, 254, 254),
+                            ))),
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
                         child: Container(
-                          width: 10,
-                          height: 10,
-                          color: pin.length >= 4
-                              ? Color.fromARGB(255, 255, 255, 255)
-                              : Color.fromARGB(0, 255, 254, 254),
-                        )),
+                            width: 10,
+                            height: 10,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60),
+                              color: pin.length >= 4
+                                  ? Color.fromARGB(255, 255, 255, 255)
+                                  : Color.fromARGB(0, 255, 254, 254),
+                            ))),
                   ],
                 ),
                 Row(
@@ -153,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const SizedBox(
                   width: 10,
-                  height: 80,
+                  height: 50,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
