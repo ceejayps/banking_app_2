@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,20 +10,12 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -48,6 +42,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Color typed = Colors.white;
+  Color empty = Colors.white38;
+  List pin = [];
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -73,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 60),
+            padding: const EdgeInsets.symmetric(horizontal: 80),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -81,24 +78,309 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text(
                   "Enter the PIN",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 208, 205, 205),
                       fontSize: 30,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w400),
                 ),
-                TextField(),
-                Container(
-                  child: SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: TextField(),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 35,
+                          height: 2,
+                          color: pin.length >= 1
+                              ? Color.fromARGB(255, 208, 205, 205)
+                              : Color.fromARGB(255, 255, 254, 254),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 35,
+                          height: 2,
+                          color: pin.length >= 2
+                              ? Color.fromARGB(255, 208, 205, 205)
+                              : Color.fromARGB(255, 255, 254, 254),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 35,
+                          height: 2,
+                          color: pin.length >= 3
+                              ? Color.fromARGB(255, 208, 205, 205)
+                              : Color.fromARGB(255, 255, 254, 254),
+                        )),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 35,
+                          height: 2,
+                          color: pin.length >= 4
+                              ? Color.fromARGB(255, 208, 205, 205)
+                              : Color.fromARGB(255, 255, 254, 254),
+                        )),
+                  ],
+                ),
+                Container(),
+                SizedBox(
+                  width: 10,
+                  height: 80,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "1",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "2",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "3",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        ))
+                  ],
+                ),
+                SizedBox(
+                  width: 10,
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "4",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "5",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "6",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        ))
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "7",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "8",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("9");
+                            }
+                          });
+
+                          print(pin);
+                        },
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "9",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        ))
+                  ],
+                ),
+                SizedBox(
+                  width: 10,
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length >= 1) {
+                              pin.removeLast();
+                            }
+                          });
+
+                          print(pin);
+                        },
+                        child: SizedBox(
+                          child: Center(
+                              child: Icon(
+                            Icons.backspace,
+                            color: Colors.white,
+                          )),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (pin.length < 4) {
+                              pin.add("0");
+                            }
+                          });
+
+                          print(pin);
+                        },
+                        child: SizedBox(
+                          child: Center(
+                            child: Text(
+                              "0",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            ),
+                          ),
+                          height: 40,
+                          width: 20,
+                        )),
+                    SizedBox(
+                      width: 10,
+                      height: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: SizedBox(
+                          child: Center(
+                              child: Icon(
+                            Icons.check,
+                            color: Colors.white,
+                          )),
+                          height: 40,
+                          width: 20,
+                        ))
+                  ],
+                )
               ],
             ),
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: null,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
