@@ -270,7 +270,7 @@ class _pin extends State<pin> {
                             onPressed: () {
                               setState(() {
                                 if (inputPin.length < 4) {
-                                  inputPin.add("4");
+                                  inputPin.add("4uo");
                                 }
                               });
 
