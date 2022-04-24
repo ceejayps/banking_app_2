@@ -243,7 +243,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                   width: size.width,
                   margin: EdgeInsets.all(size.width * .04),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 68, 48, 179),
+                    color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(30),
                     ),
@@ -256,7 +256,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Icons.home,
                           color: currentValue == 0
                               ? Color.fromARGB(255, 52, 204, 245)
-                              : Color.fromARGB(173, 255, 255, 255),
+                              : Colors.black38,
                           size: _animation.value,
                         ),
                         onPressed: () {
@@ -278,7 +278,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Icons.person_rounded,
                           color: currentValue == 1
                               ? Color.fromARGB(255, 52, 204, 245)
-                              : Color.fromARGB(173, 255, 255, 255),
+                              : Colors.black38,
                           size: _animation2.value,
                         ),
                         onPressed: () {
@@ -300,7 +300,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Icons.add_box_rounded,
                           color: currentValue == 2
                               ? Color.fromARGB(255, 52, 204, 245)
-                              : Color.fromARGB(173, 255, 255, 255),
+                              : Colors.black38,
                           size: _animation3.value,
                         ),
                         onPressed: () {
@@ -322,7 +322,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Icons.favorite_rounded,
                           color: currentValue == 3
                               ? Color.fromARGB(255, 52, 204, 245)
-                              : Color.fromARGB(173, 255, 255, 255),
+                              : Colors.black38,
                           size: _animation4.value,
                         ),
                         onPressed: () {
@@ -344,7 +344,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Icons.settings_rounded,
                           color: currentValue == 4
                               ? Color.fromARGB(255, 52, 204, 245)
-                              : Color.fromARGB(173, 255, 255, 255),
+                              : Colors.black38,
                           size: _animation5.value,
                         ),
                         onPressed: () {
