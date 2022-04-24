@@ -20,18 +20,35 @@ class _homepageState extends State<homepage> {
               Color.fromARGB(255, 68, 48, 179)
             ])),
         child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            elevation: 0,
+            leading: const IconButton(
+                onPressed: null,
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                )),
             backgroundColor: Colors.transparent,
-            appBar: AppBar(
-              elevation: 0,
-              // leading: const IconButton(
-              //     onPressed: null,
-              //     icon: Icon(
-              //       Icons.arrow_back,
-              //       color: Colors.white,
-              //     )),
-              backgroundColor: Colors.transparent,
-              title: const Text(''),
+            title: const Text(''),
+          ),
+          body: SingleChildScrollView(
+            //controller: controller,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  Text(
+                    "Hi Chester",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  )
+                ],
+              ),
             ),
-            body: Center()));
+          ),
+        ));
   }
 }
