@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'container/pin.dart';
+import 'container/pages/pin.dart';
 
 void main() {
   runApp(const MyApp());
