@@ -38,12 +38,22 @@ class _homepageState extends State<homepage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  Text(
-                    "Hi Chester",
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Hi Chester",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Text(
+                        "6 Tasks are pending",
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.left,
+                      )
+                    ],
                   )
                 ],
               ),
