@@ -35,7 +35,7 @@ class _homepageState extends State<homepage> {
           body: SingleChildScrollView(
             //controller: controller,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,7 +67,7 @@ class _homepageState extends State<homepage> {
                     width: MediaQuery.of(context).size.width,
                     height: 130,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 108, 107, 211),
+                        color: Color.fromARGB(255, 84, 81, 214),
                         borderRadius: BorderRadius.circular(20)),
                   ),
                   SizedBox(
@@ -92,6 +92,53 @@ class _homepageState extends State<homepage> {
                   SizedBox(
                     height: 30,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            width: 160,
+                            height: 160,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 84, 81, 214),
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            width: 160,
+                            height: 120,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 84, 81, 214),
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 160,
+                            height: 120,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 84, 81, 214),
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            width: 160,
+                            height: 160,
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 84, 81, 214),
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                        ],
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
