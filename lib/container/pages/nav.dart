@@ -95,7 +95,7 @@ class _MyCustomBottomNavigationBarState
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: Color.fromARGB(255, 87, 87, 87),
       body: Stack(
         children: [
           // HOME PAGE
