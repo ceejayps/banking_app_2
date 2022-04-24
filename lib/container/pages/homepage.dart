@@ -109,7 +109,7 @@ class _homepageState extends State<homepage> {
                           ),
                           Container(
                             width: 160,
-                            height: 120,
+                            height: 110,
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 84, 81, 214),
                                 borderRadius: BorderRadius.circular(20)),
@@ -120,7 +120,7 @@ class _homepageState extends State<homepage> {
                         children: [
                           Container(
                             width: 160,
-                            height: 120,
+                            height: 110,
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 84, 81, 214),
                                 borderRadius: BorderRadius.circular(20)),
