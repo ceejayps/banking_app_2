@@ -1,4 +1,5 @@
 import 'package:banking_app_2/container/auth-state.dart';
+import 'package:banking_app_2/container/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 class pin extends StatefulWidget {
@@ -481,9 +482,10 @@ class _pin extends State<pin> {
                                       print(["input pin ", inputPin.join()]);
                                       print(isWrong);
                                     } else {
-                                      setState(() {
-                                        authState().state = 0;
-                                      });
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const homepage()));
                                     }
                                   }
                                 : null,
