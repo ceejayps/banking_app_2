@@ -236,6 +236,27 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     color:
                                         const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "22",
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Done",
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 15),
+                                      textAlign: TextAlign.left,
+                                    )
+                                  ],
+                                ),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -247,6 +268,27 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     color:
                                         const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "10",
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Ongoing",
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 15),
+                                      textAlign: TextAlign.left,
+                                    )
+                                  ],
+                                ),
                               ),
                             ],
                           ),
@@ -259,6 +301,27 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     color:
                                         const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "7",
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "In progress",
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 15),
+                                      textAlign: TextAlign.left,
+                                    )
+                                  ],
+                                ),
                               ),
                               const SizedBox(
                                 height: 20,
@@ -270,6 +333,27 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     color:
                                         const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "12",
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Waiting for review",
+                                      style: TextStyle(
+                                          color: Colors.white54, fontSize: 15),
+                                      textAlign: TextAlign.left,
+                                    )
+                                  ],
+                                ),
                               ),
                             ],
                           )
