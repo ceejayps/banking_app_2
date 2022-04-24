@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,16 +33,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Color typed = Colors.white;
   Color empty = Colors.white38;
-
-  List pin = [];
+  bool isWrong = false;
+  String userPin = "1234";
+  List inputPin = [];
 
   @override
   Widget build(BuildContext context) {
     BoxDecoration dotborder = BoxDecoration(
       borderRadius: BorderRadius.circular(60),
-      color: pin.length >= 1
-          ? Color.fromARGB(255, 255, 255, 255)
-          : Color.fromARGB(0, 255, 254, 254),
+      color: isWrong == true
+          ? Color.fromARGB(255, 255, 0, 0)
+          : inputPin.length >= 1
+              ? Color.fromARGB(255, 255, 255, 255)
+              : Color.fromARGB(0, 255, 254, 254),
     );
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 76, 97, 190),
@@ -85,9 +89,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 10,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(60),
-                              color: pin.length >= 1
-                                  ? Color.fromARGB(255, 255, 255, 255)
-                                  : Color.fromARGB(0, 255, 254, 254),
+                              color: isWrong == true
+                                  ? Color.fromARGB(255, 255, 0, 0)
+                                  : inputPin.length >= 1
+                                      ? Color.fromARGB(255, 255, 255, 255)
+                                      : Color.fromARGB(0, 255, 254, 254),
                             ))),
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -96,9 +102,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 10,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(60),
-                              color: pin.length >= 2
-                                  ? Color.fromARGB(255, 255, 255, 255)
-                                  : Color.fromARGB(0, 255, 254, 254),
+                              color: isWrong == true
+                                  ? Color.fromARGB(255, 255, 0, 0)
+                                  : inputPin.length >= 2
+                                      ? Color.fromARGB(255, 255, 255, 255)
+                                      : Color.fromARGB(0, 255, 254, 254),
                             ))),
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -107,9 +115,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 10,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(60),
-                              color: pin.length >= 3
-                                  ? Color.fromARGB(255, 255, 255, 255)
-                                  : Color.fromARGB(0, 255, 254, 254),
+                              color: isWrong == true
+                                  ? Color.fromARGB(255, 255, 0, 0)
+                                  : inputPin.length >= 3
+                                      ? Color.fromARGB(255, 255, 255, 255)
+                                      : Color.fromARGB(0, 255, 254, 254),
                             ))),
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -118,9 +128,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 10,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(60),
-                              color: pin.length >= 4
-                                  ? Color.fromARGB(255, 255, 255, 255)
-                                  : Color.fromARGB(0, 255, 254, 254),
+                              color: isWrong == true
+                                  ? Color.fromARGB(255, 255, 0, 0)
+                                  : inputPin.length >= 4
+                                      ? Color.fromARGB(255, 255, 255, 255)
+                                      : Color.fromARGB(0, 255, 254, 254),
                             ))),
                   ],
                 ),
@@ -130,39 +142,47 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 35,
-                          height: 2,
-                          color: pin.length >= 1
-                              ? const Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 255, 255),
-                        )),
+                            width: 35,
+                            height: 2,
+                            color: isWrong == true
+                                ? Color.fromARGB(255, 255, 0, 0)
+                                : inputPin.length == 0
+                                    ? const Color.fromARGB(255, 255, 255, 255)
+                                    : const Color.fromARGB(
+                                        255, 208, 205, 205))),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 35,
-                          height: 2,
-                          color: pin.length >= 2
-                              ? const Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 255, 255),
-                        )),
+                            width: 35,
+                            height: 2,
+                            color: isWrong == true
+                                ? Color.fromARGB(255, 255, 0, 0)
+                                : inputPin.length == 1
+                                    ? const Color.fromARGB(255, 255, 255, 255)
+                                    : const Color.fromARGB(
+                                        255, 208, 205, 205))),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 35,
-                          height: 2,
-                          color: pin.length >= 3
-                              ? const Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 255, 255),
-                        )),
+                            width: 35,
+                            height: 2,
+                            color: isWrong == true
+                                ? Color.fromARGB(255, 255, 0, 0)
+                                : inputPin.length == 2
+                                    ? const Color.fromARGB(255, 255, 255, 255)
+                                    : const Color.fromARGB(
+                                        255, 208, 205, 205))),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          width: 35,
-                          height: 2,
-                          color: pin.length >= 4
-                              ? const Color.fromARGB(255, 208, 205, 205)
-                              : Color.fromARGB(255, 255, 255, 255),
-                        )),
+                            width: 35,
+                            height: 2,
+                            color: isWrong == true
+                                ? Color.fromARGB(255, 255, 0, 0)
+                                : inputPin.length == 3
+                                    ? const Color.fromARGB(255, 255, 255, 255)
+                                    : const Color.fromARGB(
+                                        255, 208, 205, 205))),
                   ],
                 ),
                 const SizedBox(
@@ -175,12 +195,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("1");
+                            if (inputPin.length < 4) {
+                              inputPin.add("1");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -200,12 +220,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("2");
+                            if (inputPin.length < 4) {
+                              inputPin.add("2");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -225,12 +245,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("3");
+                            if (inputPin.length < 4) {
+                              inputPin.add("3");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -255,12 +275,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("4");
+                            if (inputPin.length < 4) {
+                              inputPin.add("4");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -280,12 +300,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("5");
+                            if (inputPin.length < 4) {
+                              inputPin.add("5");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -305,12 +325,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("6");
+                            if (inputPin.length < 4) {
+                              inputPin.add("6");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -331,12 +351,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("7");
+                            if (inputPin.length < 4) {
+                              inputPin.add("7");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -356,12 +376,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("8");
+                            if (inputPin.length < 4) {
+                              inputPin.add("8");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -381,12 +401,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("9");
+                            if (inputPin.length < 4) {
+                              inputPin.add("9");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -411,12 +431,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length >= 1) {
-                              pin.removeLast();
+                            if (inputPin.length >= 1) {
+                              inputPin.removeLast();
+                              isWrong = false;
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -434,12 +455,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                         onPressed: () {
                           setState(() {
-                            if (pin.length < 4) {
-                              pin.add("0");
+                            if (inputPin.length < 4) {
+                              inputPin.add("0");
                             }
                           });
 
-                          print(pin);
+                          print(inputPin);
                         },
                         child: const SizedBox(
                           child: Center(
@@ -457,13 +478,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     TextButton(
-                        onPressed: () {},
-                        child: const SizedBox(
+                        onPressed: inputPin.length == 4
+                            ? () {
+                                if (userPin != inputPin.join()) {
+                                  setState(() {
+                                    isWrong = true;
+                                  });
+                                  print(["user pin ", userPin.split('')]);
+                                  print(["input pin ", inputPin.join()]);
+                                  print(isWrong);
+                                }
+                              }
+                            : null,
+                        child: SizedBox(
                           child: Center(
-                              child: Icon(
-                            Icons.check,
-                            color: Colors.white,
-                          )),
+                              child: Icon(Icons.check,
+                                  color: inputPin.length == 4
+                                      ? Colors.white
+                                      : Colors.grey[450])),
                           height: 40,
                           width: 20,
                         ))
