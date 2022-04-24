@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:banking_app_2/container/auth-state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const pin(title: 'Flutter Demo Home Page'),
+      home: authState(),
     );
   }
 }
