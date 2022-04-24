@@ -143,7 +143,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
-                        height: 40,
+                        height: 30,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -171,7 +171,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 130,
+                        height: 135,
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 84, 81, 214),
                             borderRadius: BorderRadius.circular(20)),
@@ -180,7 +180,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 "Mobile App Development",
                                 style: TextStyle(
@@ -196,6 +196,43 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 style: TextStyle(
                                     color: Colors.white54, fontSize: 16),
                                 textAlign: TextAlign.left,
+                              ),
+                              Spacer(),
+                              Row(
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Container(
+                                        width: 200,
+                                      ),
+                                      CircleAvatar(
+                                        backgroundColor: Colors.white,
+                                        radius: 18,
+                                        child: CircleAvatar(
+                                          radius: 16,
+                                          backgroundImage: AssetImage(
+                                              'assets/images/chester.jpg'),
+                                        ),
+                                      ),
+                                      Positioned(
+                                          left: 25,
+                                          child: CircleAvatar(
+                                            backgroundColor: Colors.white,
+                                            radius: 18,
+                                            child: CircleAvatar(
+                                              radius: 16,
+                                              backgroundImage: AssetImage(
+                                                  'assets/images/paula.jpg'),
+                                            ),
+                                          ))
+                                    ],
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    "Now",
+                                    style: TextStyle(color: Colors.white54),
+                                  )
+                                ],
                               )
                             ],
                           ),
@@ -217,7 +254,11 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 color: Colors.white),
                           ),
                           const CircleAvatar(
-                            child: Icon(Icons.date_range_rounded),
+                            radius: 15,
+                            child: Icon(
+                              Icons.date_range_rounded,
+                              size: 17,
+                            ),
                           )
                         ],
                       ),
