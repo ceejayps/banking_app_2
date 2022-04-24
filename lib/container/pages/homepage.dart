@@ -192,7 +192,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 height: 5,
                               ),
                               Text(
-                                "Chester And Paula",
+                                "Chester and Paula",
                                 style: TextStyle(
                                     color: Colors.white54, fontSize: 16),
                                 textAlign: TextAlign.left,
