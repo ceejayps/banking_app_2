@@ -30,8 +30,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _controller = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 300));
     _animation = Tween<double>(begin: 25, end: 33).animate(CurvedAnimation(
         parent: _controller,
         curve: Curves.fastLinearToSlowEaseIn,
@@ -40,8 +40,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
         setState(() {});
       });
 
-    _controller2 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _controller2 = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 300));
     _animation2 = Tween<double>(begin: 25, end: 33).animate(CurvedAnimation(
         parent: _controller2,
         curve: Curves.fastLinearToSlowEaseIn,
@@ -50,8 +50,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
         setState(() {});
       });
 
-    _controller3 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _controller3 = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 300));
     _animation3 = Tween<double>(begin: 25, end: 33).animate(CurvedAnimation(
         parent: _controller3,
         curve: Curves.fastLinearToSlowEaseIn,
@@ -60,8 +60,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
         setState(() {});
       });
 
-    _controller4 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _controller4 = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 300));
     _animation4 = Tween<double>(begin: 25, end: 33).animate(CurvedAnimation(
         parent: _controller4,
         curve: Curves.fastLinearToSlowEaseIn,
@@ -70,8 +70,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
         setState(() {});
       });
 
-    _controller5 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _controller5 = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 300));
     _animation5 = Tween<double>(begin: 25, end: 33).animate(CurvedAnimation(
         parent: _controller5,
         curve: Curves.fastLinearToSlowEaseIn,
@@ -100,7 +100,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                 begin: Alignment.topLeft,
                 end: Alignment.centerRight,
                 colors: [
-              Color.fromARGB(255, 106, 90, 217),
+              Color.fromARGB(255, 84, 81, 214),
               Color.fromARGB(255, 68, 48, 179)
             ])),
         child: Scaffold(
@@ -126,7 +126,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       Column(
@@ -146,36 +146,37 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 130,
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 84, 81, 214),
+                            color: const Color.fromARGB(255, 84, 81, 214),
                             borderRadius: BorderRadius.circular(20)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Row(
                         // ignore: prefer_const_literals_to_create_immutables
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
-                          Text(
+                          const Text(
                             "Monthly Review",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white),
                           ),
-                          Container(
-                            child: Icon(Icons.calendar_month_sharp),
+                          const CircleAvatar(
+                            child: Icon(Icons.date_range_rounded),
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Row(
@@ -187,17 +188,19 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 width: 160,
                                 height: 160,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 84, 81, 214),
+                                    color:
+                                        const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               Container(
                                 width: 160,
                                 height: 110,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 84, 81, 214),
+                                    color:
+                                        const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
                               ),
                             ],
@@ -208,17 +211,19 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 width: 160,
                                 height: 110,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 84, 81, 214),
+                                    color:
+                                        const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               Container(
                                 width: 160,
                                 height: 160,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 84, 81, 214),
+                                    color:
+                                        const Color.fromARGB(255, 84, 81, 214),
                                     borderRadius: BorderRadius.circular(20)),
                               ),
                             ],
@@ -242,10 +247,10 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                   height: size.width * .14,
                   width: size.width,
                   margin: EdgeInsets.all(size.width * .04),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
-                      Radius.circular(30),
+                      const Radius.circular(30),
                     ),
                   ),
                   child: Row(
@@ -255,7 +260,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                         icon: Icon(
                           Icons.home,
                           color: currentValue == 0
-                              ? Color.fromARGB(255, 52, 204, 245)
+                              ? const Color.fromARGB(255, 84, 81, 214)
                               : Colors.black38,
                           size: _animation.value,
                         ),
@@ -275,9 +280,9 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                       ),
                       IconButton(
                         icon: Icon(
-                          Icons.person_rounded,
+                          Icons.insert_drive_file_rounded,
                           color: currentValue == 1
-                              ? Color.fromARGB(255, 52, 204, 245)
+                              ? const Color.fromARGB(255, 84, 81, 214)
                               : Colors.black38,
                           size: _animation2.value,
                         ),
@@ -299,7 +304,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                         icon: Icon(
                           Icons.add_box_rounded,
                           color: currentValue == 2
-                              ? Color.fromARGB(255, 52, 204, 245)
+                              ? const Color.fromARGB(255, 84, 81, 214)
                               : Colors.black38,
                           size: _animation3.value,
                         ),
@@ -319,9 +324,9 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                       ),
                       IconButton(
                         icon: Icon(
-                          Icons.favorite_rounded,
+                          Icons.person_rounded,
                           color: currentValue == 3
-                              ? Color.fromARGB(255, 52, 204, 245)
+                              ? const Color.fromARGB(255, 84, 81, 214)
                               : Colors.black38,
                           size: _animation4.value,
                         ),
@@ -341,9 +346,9 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                       ),
                       IconButton(
                         icon: Icon(
-                          Icons.settings_rounded,
+                          Icons.notifications,
                           color: currentValue == 4
-                              ? Color.fromARGB(255, 52, 204, 245)
+                              ? const Color.fromARGB(255, 84, 81, 214)
                               : Colors.black38,
                           size: _animation5.value,
                         ),
