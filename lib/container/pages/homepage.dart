@@ -13,8 +13,8 @@ class _homepageState extends State<homepage> {
     return Container(
         decoration: const BoxDecoration(
             gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
+                begin: Alignment.topLeft,
+                end: Alignment.centerRight,
                 colors: [
               Color.fromARGB(255, 106, 90, 217),
               Color.fromARGB(255, 68, 48, 179)
@@ -35,12 +35,17 @@ class _homepageState extends State<homepage> {
           body: SingleChildScrollView(
             //controller: controller,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 50,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Hi Chester",
                         style: TextStyle(
@@ -54,7 +59,39 @@ class _homepageState extends State<homepage> {
                         textAlign: TextAlign.left,
                       )
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 130,
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 108, 107, 211),
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    // ignore: prefer_const_literals_to_create_immutables
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Monthly Review",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white),
+                      ),
+                      Container(
+                        child: Icon(Icons.calendar_month_sharp),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                 ],
               ),
             ),
