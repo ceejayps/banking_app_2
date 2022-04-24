@@ -1,6 +1,7 @@
 import 'package:banking_app_2/container/auth-state.dart';
 import 'package:banking_app_2/container/pages/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class pin extends StatefulWidget {
   const pin({Key? key, required this.title}) : super(key: key);
@@ -478,6 +479,7 @@ class _pin extends State<pin> {
                                       setState(() {
                                         isWrong = true;
                                       });
+                                      HapticFeedback.heavyImpact();
                                       print(["user pin ", userPin.split('')]);
                                       print(["input pin ", inputPin.join()]);
                                       print(isWrong);
