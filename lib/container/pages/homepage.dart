@@ -107,6 +107,22 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             elevation: 0,
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 30),
+                child: CircleAvatar(
+                  child: CircleAvatar(
+                    radius: 20,
+                    child: Icon(
+                      Icons.person,
+                      size: 35,
+                    ),
+                  ),
+                  radius: 22,
+                  backgroundColor: Colors.white,
+                ),
+              )
+            ],
             leading: const IconButton(
                 onPressed: null,
                 icon: Icon(
@@ -127,7 +143,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
-                        height: 50,
+                        height: 40,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
