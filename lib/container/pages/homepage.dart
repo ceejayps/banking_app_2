@@ -106,443 +106,464 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
               Color.fromARGB(255, 84, 81, 214),
               Color.fromARGB(255, 68, 48, 179)
             ])),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            elevation: 0,
-            actions: const [
-              Padding(
-                padding: EdgeInsets.only(right: 30),
-                child: CircleAvatar(
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/chester.jpg'),
-                    radius: 20,
-                  ),
-                  radius: 22,
-                  backgroundColor: Colors.white,
-                ),
-              )
-            ],
-            leading: const IconButton(
-                onPressed: null,
-                icon: Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                )),
-            backgroundColor: Colors.transparent,
-            title: const Text(''),
-          ),
-          body: Stack(
-            children: [
-              SingleChildScrollView(
-                //controller: controller,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 30,
+        child: Stack(
+          children: [
+            Image(image: AssetImage("assets/images/rings.png")),
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBar(
+                elevation: 0,
+                actions: const [
+                  Padding(
+                    padding: EdgeInsets.only(right: 30),
+                    child: CircleAvatar(
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/images/chester.jpg'),
+                        radius: 20,
                       ),
-                      Column(
+                      radius: 22,
+                      backgroundColor: Colors.white,
+                    ),
+                  )
+                ],
+                leading: const IconButton(
+                    onPressed: null,
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    )),
+                backgroundColor: Colors.transparent,
+                title: const Text(''),
+              ),
+              body: Stack(
+                children: [
+                  SingleChildScrollView(
+                    //controller: controller,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "Hi Chester",
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                        children: [
+                          const SizedBox(
+                            height: 30,
                           ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "6 Tasks are pending",
-                            style:
-                                TextStyle(color: Colors.white54, fontSize: 18),
-                            textAlign: TextAlign.left,
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 135,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 84, 81, 214),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                          Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "Mobile App Development",
+                            children: const [
+                              Text(
+                                "Hi Chester",
                                 style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w800,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 5,
                               ),
-                              const Text(
-                                "Chester and Paula",
+                              Text(
+                                "6 Tasks are pending",
                                 style: TextStyle(
-                                    color: Colors.white54, fontSize: 16),
+                                    color: Colors.white54, fontSize: 18),
                                 textAlign: TextAlign.left,
-                              ),
-                              const Spacer(),
-                              Row(
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            height: 135,
+                            decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 84, 81, 214),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Stack(
+                                  const Text(
+                                    "Mobile App Development",
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w800,
+                                        color: Colors.white),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  const Text(
+                                    "Chester and Paula",
+                                    style: TextStyle(
+                                        color: Colors.white54, fontSize: 16),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  const Spacer(),
+                                  Row(
                                     children: [
-                                      Container(
-                                        width: 200,
-                                      ),
-                                      const CircleAvatar(
-                                        backgroundColor: Colors.white,
-                                        radius: 18,
-                                        child: CircleAvatar(
-                                          radius: 16,
-                                          backgroundImage: AssetImage(
-                                              'assets/images/chester.jpg'),
-                                        ),
-                                      ),
-                                      const Positioned(
-                                          left: 25,
-                                          child: CircleAvatar(
+                                      Stack(
+                                        children: [
+                                          Container(
+                                            width: 200,
+                                          ),
+                                          const CircleAvatar(
                                             backgroundColor: Colors.white,
                                             radius: 18,
                                             child: CircleAvatar(
                                               radius: 16,
                                               backgroundImage: AssetImage(
-                                                  'assets/images/paula.jpg'),
+                                                  'assets/images/chester.jpg'),
                                             ),
-                                          ))
+                                          ),
+                                          const Positioned(
+                                              left: 25,
+                                              child: CircleAvatar(
+                                                backgroundColor: Colors.white,
+                                                radius: 18,
+                                                child: CircleAvatar(
+                                                  radius: 16,
+                                                  backgroundImage: AssetImage(
+                                                      'assets/images/paula.jpg'),
+                                                ),
+                                              ))
+                                        ],
+                                      ),
+                                      const Spacer(),
+                                      const Text(
+                                        "Now",
+                                        style: const TextStyle(
+                                            color: Colors.white54),
+                                      )
                                     ],
-                                  ),
-                                  const Spacer(),
-                                  const Text(
-                                    "Now",
-                                    style:
-                                        const TextStyle(color: Colors.white54),
                                   )
+                                ],
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              const Text(
+                                "Monthly Review",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white),
+                              ),
+                              const CircleAvatar(
+                                radius: 15,
+                                child: Icon(
+                                  Icons.date_range_rounded,
+                                  size: 17,
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                children: [
+                                  Container(
+                                    width: tileWith,
+                                    height: tileWith,
+                                    decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                            255, 84, 81, 214),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          "22",
+                                          style: TextStyle(
+                                              fontSize: 35,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          "Done",
+                                          style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                          textAlign: TextAlign.left,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  Container(
+                                    width: tileWith,
+                                    height: 110,
+                                    decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                            255, 84, 81, 214),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          "10",
+                                          style: TextStyle(
+                                              fontSize: 35,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          "Ongoing",
+                                          style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                          textAlign: TextAlign.left,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    width: tileWith,
+                                    height: 110,
+                                    decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                            255, 84, 81, 214),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          "7",
+                                          style: TextStyle(
+                                              fontSize: 35,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          "In progress",
+                                          style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                          textAlign: TextAlign.left,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  Container(
+                                    width: tileWith,
+                                    height: tileWith,
+                                    decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                            255, 84, 81, 214),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text(
+                                          "12",
+                                          style: TextStyle(
+                                              fontSize: 35,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          "Waiting for review",
+                                          style: TextStyle(
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                          textAlign: TextAlign.left,
+                                        )
+                                      ],
+                                    ),
+                                  ),
                                 ],
                               )
                             ],
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Row(
-                        // ignore: prefer_const_literals_to_create_immutables
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        // ignore: prefer_const_literals_to_create_immutables
-                        children: [
-                          const Text(
-                            "Monthly Review",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white),
+                          SizedBox(
+                            height: 80,
                           ),
-                          const CircleAvatar(
-                            radius: 15,
-                            child: Icon(
-                              Icons.date_range_rounded,
-                              size: 17,
-                            ),
-                          )
                         ],
                       ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              Container(
-                                width: tileWith,
-                                height: tileWith,
-                                decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 84, 81, 214),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Text(
-                                      "22",
-                                      style: TextStyle(
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "Done",
-                                      style: TextStyle(
-                                          color: Colors.white54, fontSize: 15),
-                                      textAlign: TextAlign.left,
-                                    )
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Container(
-                                width: tileWith,
-                                height: 110,
-                                decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 84, 81, 214),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Text(
-                                      "10",
-                                      style: TextStyle(
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "Ongoing",
-                                      style: TextStyle(
-                                          color: Colors.white54, fontSize: 15),
-                                      textAlign: TextAlign.left,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                width: tileWith,
-                                height: 110,
-                                decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 84, 81, 214),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Text(
-                                      "7",
-                                      style: TextStyle(
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "In progress",
-                                      style: TextStyle(
-                                          color: Colors.white54, fontSize: 15),
-                                      textAlign: TextAlign.left,
-                                    )
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Container(
-                                width: tileWith,
-                                height: tileWith,
-                                decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 84, 81, 214),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Text(
-                                      "12",
-                                      style: TextStyle(
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "Waiting for review",
-                                      style: TextStyle(
-                                          color: Colors.white54, fontSize: 15),
-                                      textAlign: TextAlign.left,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: size.height,
-                width: size.width,
-                child: null,
-              ),
-              Positioned(
-                bottom: 0,
-                right: 0,
-                left: 0,
-                child: Container(
-                  height: size.width * .14,
-                  width: size.width,
-                  margin: EdgeInsets.all(size.width * .04),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30),
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      IconButton(
-                        icon: Icon(
-                          Icons.home,
-                          color: currentValue == 0
-                              ? const Color.fromARGB(255, 84, 81, 214)
-                              : Colors.black38,
-                          size: _animation.value,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            currentValue = 0;
-                            _controller.forward();
-                            _controller2.reverse();
-                            _controller3.reverse();
-                            _controller4.reverse();
-                            _controller5.reverse();
-                            HapticFeedback.lightImpact();
-                          });
-                        },
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.insert_drive_file_rounded,
-                          color: currentValue == 1
-                              ? const Color.fromARGB(255, 84, 81, 214)
-                              : Colors.black38,
-                          size: _animation2.value,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            currentValue = 1;
-                            _controller2.forward();
-                            _controller.reverse();
-                            _controller3.reverse();
-                            _controller4.reverse();
-                            _controller5.reverse();
-                            HapticFeedback.lightImpact();
-                          });
-                        },
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.add_box_rounded,
-                          color: currentValue == 2
-                              ? const Color.fromARGB(255, 84, 81, 214)
-                              : Colors.black38,
-                          size: _animation3.value,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            currentValue = 2;
-                            _controller3.forward();
-                            _controller.reverse();
-                            _controller2.reverse();
-                            _controller4.reverse();
-                            _controller5.reverse();
-                            HapticFeedback.lightImpact();
-                          });
-                        },
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.person_rounded,
-                          color: currentValue == 3
-                              ? const Color.fromARGB(255, 84, 81, 214)
-                              : Colors.black38,
-                          size: _animation4.value,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            currentValue = 3;
-                            _controller4.forward();
-                            _controller.reverse();
-                            _controller2.reverse();
-                            _controller3.reverse();
-                            _controller5.reverse();
-                            HapticFeedback.lightImpact();
-                          });
-                        },
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.notifications,
-                          color: currentValue == 4
-                              ? const Color.fromARGB(255, 84, 81, 214)
-                              : Colors.black38,
-                          size: _animation5.value,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            currentValue = 4;
-                            _controller5.forward();
-                            _controller.reverse();
-                            _controller2.reverse();
-                            _controller3.reverse();
-                            _controller4.reverse();
-                            HapticFeedback.lightImpact();
-                          });
-                        },
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                      ),
-                    ],
+                  SizedBox(
+                    height: size.height,
+                    width: size.width,
+                    child: null,
                   ),
-                ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    left: 0,
+                    child: Container(
+                      height: size.width * .14,
+                      width: size.width,
+                      margin: EdgeInsets.all(size.width * .04),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(30),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          IconButton(
+                            icon: Icon(
+                              Icons.home,
+                              color: currentValue == 0
+                                  ? const Color.fromARGB(255, 84, 81, 214)
+                                  : Colors.black38,
+                              size: _animation.value,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                currentValue = 0;
+                                _controller.forward();
+                                _controller2.reverse();
+                                _controller3.reverse();
+                                _controller4.reverse();
+                                _controller5.reverse();
+                                HapticFeedback.lightImpact();
+                              });
+                            },
+                            splashColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              Icons.insert_drive_file_rounded,
+                              color: currentValue == 1
+                                  ? const Color.fromARGB(255, 84, 81, 214)
+                                  : Colors.black38,
+                              size: _animation2.value,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                currentValue = 1;
+                                _controller2.forward();
+                                _controller.reverse();
+                                _controller3.reverse();
+                                _controller4.reverse();
+                                _controller5.reverse();
+                                HapticFeedback.lightImpact();
+                              });
+                            },
+                            splashColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              Icons.add_box_rounded,
+                              color: currentValue == 2
+                                  ? const Color.fromARGB(255, 84, 81, 214)
+                                  : Colors.black38,
+                              size: _animation3.value,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                currentValue = 2;
+                                _controller3.forward();
+                                _controller.reverse();
+                                _controller2.reverse();
+                                _controller4.reverse();
+                                _controller5.reverse();
+                                HapticFeedback.lightImpact();
+                              });
+                            },
+                            splashColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              Icons.person_rounded,
+                              color: currentValue == 3
+                                  ? const Color.fromARGB(255, 84, 81, 214)
+                                  : Colors.black38,
+                              size: _animation4.value,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                currentValue = 3;
+                                _controller4.forward();
+                                _controller.reverse();
+                                _controller2.reverse();
+                                _controller3.reverse();
+                                _controller5.reverse();
+                                HapticFeedback.lightImpact();
+                              });
+                            },
+                            splashColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              Icons.notifications,
+                              color: currentValue == 4
+                                  ? const Color.fromARGB(255, 84, 81, 214)
+                                  : Colors.black38,
+                              size: _animation5.value,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                currentValue = 4;
+                                _controller5.forward();
+                                _controller.reverse();
+                                _controller2.reverse();
+                                _controller3.reverse();
+                                _controller4.reverse();
+                                HapticFeedback.lightImpact();
+                              });
+                            },
+                            splashColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ));
   }
 }
