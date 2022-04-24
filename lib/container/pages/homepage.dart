@@ -110,9 +110,9 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             elevation: 0,
-            actions: [
+            actions: const [
               Padding(
-                padding: const EdgeInsets.only(right: 30),
+                padding: EdgeInsets.only(right: 30),
                 child: CircleAvatar(
                   child: CircleAvatar(
                     backgroundImage: AssetImage('assets/images/chester.jpg'),
@@ -180,7 +180,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "Mobile App Development",
                                 style: TextStyle(
@@ -238,7 +238,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                  children: const [
                                     Text(
                                       "22",
                                       style: TextStyle(
@@ -270,7 +270,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                  children: const [
                                     Text(
                                       "10",
                                       style: TextStyle(
@@ -303,7 +303,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                  children: const [
                                     Text(
                                       "7",
                                       style: TextStyle(
@@ -335,7 +335,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                  children: const [
                                     Text(
                                       "12",
                                       style: TextStyle(
