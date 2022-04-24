@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -94,6 +96,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double tileWith = 165;
     return Container(
         decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -112,11 +115,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                 padding: const EdgeInsets.only(right: 30),
                 child: CircleAvatar(
                   child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/chester.jpg'),
                     radius: 20,
-                    child: Icon(
-                      Icons.person,
-                      size: 35,
-                    ),
                   ),
                   radius: 22,
                   backgroundColor: Colors.white,
@@ -155,9 +155,13 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
                             "6 Tasks are pending",
-                            style: TextStyle(color: Colors.white),
+                            style:
+                                TextStyle(color: Colors.white54, fontSize: 18),
                             textAlign: TextAlign.left,
                           )
                         ],
@@ -171,6 +175,31 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 84, 81, 214),
                             borderRadius: BorderRadius.circular(20)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Mobile App Development",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w800,
+                                    color: Colors.white),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "Chester And Paula",
+                                style: TextStyle(
+                                    color: Colors.white54, fontSize: 16),
+                                textAlign: TextAlign.left,
+                              )
+                            ],
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         height: 30,
@@ -201,8 +230,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Column(
                             children: [
                               Container(
-                                width: 160,
-                                height: 160,
+                                width: tileWith,
+                                height: tileWith,
                                 decoration: BoxDecoration(
                                     color:
                                         const Color.fromARGB(255, 84, 81, 214),
@@ -212,7 +241,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 height: 20,
                               ),
                               Container(
-                                width: 160,
+                                width: tileWith,
                                 height: 110,
                                 decoration: BoxDecoration(
                                     color:
@@ -224,7 +253,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                           Column(
                             children: [
                               Container(
-                                width: 160,
+                                width: tileWith,
                                 height: 110,
                                 decoration: BoxDecoration(
                                     color:
@@ -235,8 +264,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 height: 20,
                               ),
                               Container(
-                                width: 160,
-                                height: 160,
+                                width: tileWith,
+                                height: tileWith,
                                 decoration: BoxDecoration(
                                     color:
                                         const Color.fromARGB(255, 84, 81, 214),
