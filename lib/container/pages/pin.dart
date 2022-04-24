@@ -1,3 +1,4 @@
+import 'package:banking_app_2/container/auth-state.dart';
 import 'package:flutter/material.dart';
 
 class pin extends StatefulWidget {
@@ -479,6 +480,10 @@ class _pin extends State<pin> {
                                       print(["user pin ", userPin.split('')]);
                                       print(["input pin ", inputPin.join()]);
                                       print(isWrong);
+                                    } else {
+                                      setState(() {
+                                        authState().state = 0;
+                                      });
                                     }
                                   }
                                 : null,
