@@ -181,23 +181,23 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Mobile App Development",
                                 style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w800,
                                     color: Colors.white),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
-                              Text(
+                              const Text(
                                 "Chester and Paula",
                                 style: TextStyle(
                                     color: Colors.white54, fontSize: 16),
                                 textAlign: TextAlign.left,
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Row(
                                 children: [
                                   Stack(
@@ -205,7 +205,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                       Container(
                                         width: 200,
                                       ),
-                                      CircleAvatar(
+                                      const CircleAvatar(
                                         backgroundColor: Colors.white,
                                         radius: 18,
                                         child: CircleAvatar(
@@ -214,7 +214,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                               'assets/images/chester.jpg'),
                                         ),
                                       ),
-                                      Positioned(
+                                      const Positioned(
                                           left: 25,
                                           child: CircleAvatar(
                                             backgroundColor: Colors.white,
@@ -227,10 +227,11 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                           ))
                                     ],
                                   ),
-                                  Spacer(),
-                                  Text(
+                                  const Spacer(),
+                                  const Text(
                                     "Now",
-                                    style: TextStyle(color: Colors.white54),
+                                    style:
+                                        const TextStyle(color: Colors.white54),
                                   )
                                 ],
                               )
@@ -420,7 +421,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
-                      const Radius.circular(30),
+                      Radius.circular(30),
                     ),
                   ),
                   child: Row(
