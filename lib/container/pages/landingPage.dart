@@ -1,3 +1,4 @@
+import 'package:banking_app_2/container/auth-state.dart';
 import 'package:flutter/material.dart';
 
 class landingPage extends StatelessWidget {
@@ -48,19 +49,25 @@ class landingPage extends StatelessWidget {
                     height: 50,
                   ),
                   Center(
-                    child: Container(
-                      width: MediaQuery.of(context).size.width / 1.6,
-                      height: 70,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50)),
-                      child: Center(
-                        child: Text(
-                          "Get Started",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 2, 33, 56)),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => authState()));
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 1.6,
+                        height: 70,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50)),
+                        child: Center(
+                          child: Text(
+                            "Get Started",
+                            style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 2, 33, 56)),
+                          ),
                         ),
                       ),
                     ),
