@@ -188,9 +188,9 @@ class _ongoingState extends State<ongoing> {
                                           vertical: 20),
                                       child: Column(
                                         children: [
-                                          Text("10 AM"),
+                                          Text(time[index + 0]),
                                           Spacer(),
-                                          Text("11 AM")
+                                          Text(time[index + 1])
                                         ],
                                       ),
                                     ),
@@ -230,7 +230,7 @@ class _ongoingState extends State<ongoing> {
                                                 Stack(
                                                   children: [
                                                     Container(
-                                                      width: 200,
+                                                      width: 60,
                                                     ),
                                                     const CircleAvatar(
                                                       backgroundColor:
@@ -258,8 +258,10 @@ class _ongoingState extends State<ongoing> {
                                                   ],
                                                 ),
                                                 const Spacer(),
-                                                const Text(
-                                                  "Now",
+                                                Text(
+                                                  time[index] +
+                                                      "-" +
+                                                      time[index + 1],
                                                   style: TextStyle(
                                                       color: Colors.white54),
                                                 )
@@ -281,42 +283,32 @@ class _ongoingState extends State<ongoing> {
                           : Padding(
                               padding: const EdgeInsets.symmetric(vertical: 10),
                               child: Container(
-                                height: 115,
+                                height: 115 / 2.5,
                                 child: Row(
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 20),
-                                      child: Column(
-                                        children: [
-                                          Text("10 AM"),
-                                          Spacer(),
-                                          Text("11 AM")
-                                        ],
-                                      ),
+                                    Text(time[index]),
+                                    Spacer(),
+                                    Stack(
+                                      children: [
+                                        const CircleAvatar(
+                                          backgroundColor: Colors.white,
+                                          radius: 9,
+                                          child: CircleAvatar(
+                                            radius: 4.5,
+                                            backgroundColor: Colors.red,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     Spacer(),
-                                    Container(
-                                      height: 115,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.74,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(15.0),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            const Text(
-                                              "Mobile App Development",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w800,
-                                                  color: Colors.white),
-                                            ),
-                                          ],
-                                        ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 3.0),
+                                      child: Container(
+                                        height: 1.3,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.68,
+                                        color: Colors.red,
                                       ),
                                     )
                                   ],
