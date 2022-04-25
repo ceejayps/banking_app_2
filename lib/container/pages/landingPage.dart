@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:slider_button/slider_button.dart';
 
 class landingPage extends StatelessWidget {
   const landingPage({Key? key}) : super(key: key);
