@@ -22,14 +22,18 @@ class _ongoingState extends State<ongoing> {
     "4 PM",
   ];
   List title = [
-    "Mobile App Devevelopment",
-    "Web Devevelopment",
-    "Web Devevelopment ",
+    "Mobile App Development",
+    "Web Development",
+    "Web Development",
     "UI/UX Over Look",
-    "1 PM",
-    "2 PM",
-    "3 PM",
-    "4 PM",
+    "Mobile App Development",
+    "Web Development",
+    "Web Development",
+    "UI/UX Over Look",
+    "Mobile App Development",
+    "Web Development",
+    "Web Development",
+    "UI/UX Over Look",
   ];
 
   @override
