@@ -9,10 +9,10 @@ class landingPage extends StatelessWidget {
       decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topLeft,
-              end: Alignment.centerRight,
+              end: Alignment.bottomCenter,
               colors: [
-            Color.fromARGB(255, 84, 81, 214),
-            Color.fromARGB(255, 68, 48, 179)
+            Color.fromARGB(255, 249, 250, 254),
+            Color.fromARGB(255, 180, 201, 221)
           ])),
       child: Stack(children: []),
     );
