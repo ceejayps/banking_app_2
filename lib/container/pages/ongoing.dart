@@ -315,51 +315,6 @@ class _ongoingState extends State<ongoing> {
                                                   fontWeight: FontWeight.w800,
                                                   color: Colors.white),
                                             ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            const Text(
-                                              "Chester and Paula",
-                                              style: TextStyle(
-                                                  color: Colors.white54,
-                                                  fontSize: 16),
-                                              textAlign: TextAlign.left,
-                                            ),
-                                            const Spacer(),
-                                            Row(
-                                              children: [
-                                                Stack(
-                                                  children: [
-                                                    Container(
-                                                      width: 200,
-                                                    ),
-                                                    const CircleAvatar(
-                                                      backgroundColor:
-                                                          Colors.white,
-                                                      radius: 14,
-                                                      child: CircleAvatar(
-                                                        radius: 13,
-                                                        backgroundImage: AssetImage(
-                                                            'assets/images/chester.jpg'),
-                                                      ),
-                                                    ),
-                                                    const Positioned(
-                                                        left: 25,
-                                                        child: CircleAvatar(
-                                                          backgroundColor:
-                                                              Colors.white,
-                                                          radius: 14,
-                                                          child: CircleAvatar(
-                                                            radius: 13,
-                                                            backgroundImage:
-                                                                AssetImage(
-                                                                    'assets/images/paula.jpg'),
-                                                          ),
-                                                        ))
-                                                  ],
-                                                ),
-                                              ],
-                                            )
                                           ],
                                         ),
                                       ),
