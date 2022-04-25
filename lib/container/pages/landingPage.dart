@@ -14,7 +14,7 @@ class landingPage extends StatelessWidget {
             Color.fromARGB(255, 249, 250, 254),
             Color.fromARGB(255, 180, 201, 221)
           ])),
-      child: Stack(children: []),
+      child: Stack(children: [Column()]),
     );
   }
 }
