@@ -23,29 +23,30 @@ class landingPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Image(image: AssetImage("assets/images/u.png")),
+                  const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child:
+                        Image(image: const AssetImage("assets/images/u.png")),
                   ),
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+                  const Text(
                     "Manage your \n daily tasks",
                     style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 2, 33, 56)),
+                        color: const Color.fromARGB(255, 2, 33, 56)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     "Team and project management with \n solution providing app",
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w500,
                         color: Color.fromARGB(255, 2, 33, 56)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   Center(
@@ -60,8 +61,8 @@ class landingPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
-                          child: Text(
+                        child: const Center(
+                          child: const Text(
                             "Get Started",
                             style: TextStyle(
                                 fontSize: 22,
@@ -72,7 +73,7 @@ class landingPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             )));
