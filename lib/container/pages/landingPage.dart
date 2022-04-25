@@ -25,8 +25,7 @@ class landingPage extends StatelessWidget {
                 children: [
                   const Padding(
                     padding: EdgeInsets.all(20.0),
-                    child:
-                        Image(image: const AssetImage("assets/images/u.png")),
+                    child: Image(image: AssetImage("assets/images/u.png")),
                   ),
                   const Spacer(),
                   const Text(
@@ -34,7 +33,7 @@ class landingPage extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 2, 33, 56)),
+                        color: Color.fromARGB(255, 2, 33, 56)),
                   ),
                   const SizedBox(
                     height: 20,
@@ -62,7 +61,7 @@ class landingPage extends StatelessWidget {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50)),
                         child: const Center(
-                          child: const Text(
+                          child: Text(
                             "Get Started",
                             style: TextStyle(
                                 fontSize: 22,
