@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types
 
+import 'package:banking_app_2/container/pages/ongoing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -566,6 +567,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                 _controller4.reverse();
                                 HapticFeedback.lightImpact();
                               });
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => ongoing()));
                             },
                             splashColor: Colors.transparent,
                             highlightColor: Colors.transparent,
