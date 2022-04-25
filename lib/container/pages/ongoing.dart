@@ -20,37 +20,66 @@ class _ongoingState extends State<ongoing> {
               Color.fromARGB(255, 175, 190, 206),
               Color.fromARGB(255, 180, 201, 221)
             ])),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            leading: Padding(
-              padding: const EdgeInsets.only(left: 15, top: 15),
-              child: Container(
-                  height: 6,
-                  width: 6,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        width: 1,
-                        color: const Color.fromARGB(255, 84, 81, 214),
-                      )),
-                  child: const Icon(Icons.nat)),
-            ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Scaffold(
             backgroundColor: Colors.transparent,
-            elevation: 0,
-            actions: const [
-              Padding(
-                padding: EdgeInsets.only(right: 30),
-                child: CircleAvatar(
+            appBar: AppBar(
+              leading: Padding(
+                padding:
+                    const EdgeInsets.only(top: 7.5, bottom: 7.5, right: 15),
+                child: Container(
+                    height: 6,
+                    width: 6,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          width: 1.2,
+                          color: const Color.fromARGB(137, 83, 81, 214),
+                        )),
+                    child: const Icon(
+                      Icons.arrow_back_outlined,
+                      size: 30,
+                      color: Color.fromARGB(255, 84, 81, 214),
+                    )),
+              ),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              actions: const [
+                CircleAvatar(
                   child: CircleAvatar(
                     backgroundImage: AssetImage('assets/images/chester.jpg'),
                     radius: 20,
                   ),
-                  radius: 22,
+                  radius: 20,
                   backgroundColor: Colors.white,
-                ),
-              )
-            ],
+                )
+              ],
+            ),
+            body: Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                        child: Row(
+                      children: [Icon(Icons.arrow_back), Text("  Mar")],
+                    )),
+                    Spacer(),
+                    Text(
+                      "April",
+                    ),
+                    Spacer(),
+                    Container(
+                        child: Row(
+                      children: [
+                        Text("May  "),
+                        Icon(Icons.arrow_forward),
+                      ],
+                    )),
+                  ],
+                )
+              ],
+            ),
           ),
         ));
   }
