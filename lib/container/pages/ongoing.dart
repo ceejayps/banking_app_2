@@ -11,6 +11,17 @@ class ongoing extends StatefulWidget {
 
 class _ongoingState extends State<ongoing> {
   List days = ["Wed", 'Thur', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed'];
+  List time = [
+    "9 AM",
+    "10 AM",
+    "11 AM",
+    "12 PM",
+    "1 PM",
+    "2 PM",
+    "3 PM",
+    "4 PM",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -163,12 +174,200 @@ class _ongoingState extends State<ongoing> {
                 //Spacer()
                 Expanded(
                   child: ListView.builder(
-                    itemCount: 2,
+                    itemCount: 5,
                     itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(height: 120),
-                      );
+                      return index != 1
+                          ? Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Container(
+                                height: 115,
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 20),
+                                      child: Column(
+                                        children: [
+                                          Text("10 AM"),
+                                          Spacer(),
+                                          Text("11 AM")
+                                        ],
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Container(
+                                      height: 115,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.74,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            const Text(
+                                              "Mobile App Development",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w800,
+                                                  color: Colors.white),
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            const Text(
+                                              "Chester and Paula",
+                                              style: TextStyle(
+                                                  color: Colors.white54,
+                                                  fontSize: 16),
+                                              textAlign: TextAlign.left,
+                                            ),
+                                            const Spacer(),
+                                            Row(
+                                              children: [
+                                                Stack(
+                                                  children: [
+                                                    Container(
+                                                      width: 200,
+                                                    ),
+                                                    const CircleAvatar(
+                                                      backgroundColor:
+                                                          Colors.white,
+                                                      radius: 14,
+                                                      child: CircleAvatar(
+                                                        radius: 13,
+                                                        backgroundImage: AssetImage(
+                                                            'assets/images/chester.jpg'),
+                                                      ),
+                                                    ),
+                                                    const Positioned(
+                                                        left: 25,
+                                                        child: CircleAvatar(
+                                                          backgroundColor:
+                                                              Colors.white,
+                                                          radius: 14,
+                                                          child: CircleAvatar(
+                                                            radius: 13,
+                                                            backgroundImage:
+                                                                AssetImage(
+                                                                    'assets/images/paula.jpg'),
+                                                          ),
+                                                        ))
+                                                  ],
+                                                ),
+                                                const Spacer(),
+                                                const Text(
+                                                  "Now",
+                                                  style: TextStyle(
+                                                      color: Colors.white54),
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      decoration: BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 84, 81, 214),
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            )
+                          : Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Container(
+                                height: 115,
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 20),
+                                      child: Column(
+                                        children: [
+                                          Text("10 AM"),
+                                          Spacer(),
+                                          Text("11 AM")
+                                        ],
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Container(
+                                      height: 115,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.74,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            const Text(
+                                              "Mobile App Development",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w800,
+                                                  color: Colors.white),
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            const Text(
+                                              "Chester and Paula",
+                                              style: TextStyle(
+                                                  color: Colors.white54,
+                                                  fontSize: 16),
+                                              textAlign: TextAlign.left,
+                                            ),
+                                            const Spacer(),
+                                            Row(
+                                              children: [
+                                                Stack(
+                                                  children: [
+                                                    Container(
+                                                      width: 200,
+                                                    ),
+                                                    const CircleAvatar(
+                                                      backgroundColor:
+                                                          Colors.white,
+                                                      radius: 14,
+                                                      child: CircleAvatar(
+                                                        radius: 13,
+                                                        backgroundImage: AssetImage(
+                                                            'assets/images/chester.jpg'),
+                                                      ),
+                                                    ),
+                                                    const Positioned(
+                                                        left: 25,
+                                                        child: CircleAvatar(
+                                                          backgroundColor:
+                                                              Colors.white,
+                                                          radius: 14,
+                                                          child: CircleAvatar(
+                                                            radius: 13,
+                                                            backgroundImage:
+                                                                AssetImage(
+                                                                    'assets/images/paula.jpg'),
+                                                          ),
+                                                        ))
+                                                  ],
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
                     },
                   ),
                 ),
