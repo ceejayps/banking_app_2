@@ -177,6 +177,19 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                             width: MediaQuery.of(context).size.width,
                             height: 135,
                             decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black12
+                                        .withOpacity(0.05), //color of shadow
+                                    spreadRadius: 5, //spread radius
+                                    blurRadius: 7, // blur radius
+                                    offset: Offset(
+                                        0, 2), // changes position of shadow
+                                    //first paramerter of offset is left-right
+                                    //second parameter is top to down
+                                  ),
+                                  //you can set more BoxShadow() here
+                                ],
                                 color: const Color.fromARGB(255, 84, 81, 214),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Padding(
