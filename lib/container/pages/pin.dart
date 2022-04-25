@@ -1,5 +1,7 @@
-import 'package:banking_app_2/container/auth-state.dart';
+// ignore_for_file: camel_case_types
+
 import 'package:banking_app_2/container/pages/homepage.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,15 +22,6 @@ class _pin extends State<pin> {
 
   @override
   Widget build(BuildContext context) {
-    BoxDecoration dotborder = BoxDecoration(
-      borderRadius: BorderRadius.circular(60),
-      color: isWrong == true
-          ? Color.fromARGB(255, 255, 0, 0)
-          : inputPin.length >= 1
-              ? Color.fromARGB(255, 255, 255, 255)
-              : Color.fromARGB(0, 255, 254, 254),
-    );
-
     return Container(
         decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -67,7 +60,7 @@ class _pin extends State<pin> {
                           fontSize: 30,
                           fontWeight: FontWeight.w400),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     Row(
@@ -81,10 +74,12 @@ class _pin extends State<pin> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(60),
                                   color: isWrong == true
-                                      ? Color.fromARGB(255, 255, 0, 0)
-                                      : inputPin.length >= 1
-                                          ? Color.fromARGB(255, 255, 255, 255)
-                                          : Color.fromARGB(0, 255, 254, 254),
+                                      ? const Color.fromARGB(255, 255, 0, 0)
+                                      : inputPin.isNotEmpty
+                                          ? const Color.fromARGB(
+                                              255, 255, 255, 255)
+                                          : const Color.fromARGB(
+                                              0, 255, 254, 254),
                                 ))),
                         Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -94,10 +89,12 @@ class _pin extends State<pin> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(60),
                                   color: isWrong == true
-                                      ? Color.fromARGB(255, 255, 0, 0)
+                                      ? const Color.fromARGB(255, 255, 0, 0)
                                       : inputPin.length >= 2
-                                          ? Color.fromARGB(255, 255, 255, 255)
-                                          : Color.fromARGB(0, 255, 254, 254),
+                                          ? const Color.fromARGB(
+                                              255, 255, 255, 255)
+                                          : const Color.fromARGB(
+                                              0, 255, 254, 254),
                                 ))),
                         Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -107,10 +104,12 @@ class _pin extends State<pin> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(60),
                                   color: isWrong == true
-                                      ? Color.fromARGB(255, 255, 0, 0)
+                                      ? const Color.fromARGB(255, 255, 0, 0)
                                       : inputPin.length >= 3
-                                          ? Color.fromARGB(255, 255, 255, 255)
-                                          : Color.fromARGB(0, 255, 254, 254),
+                                          ? const Color.fromARGB(
+                                              255, 255, 255, 255)
+                                          : const Color.fromARGB(
+                                              0, 255, 254, 254),
                                 ))),
                         Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 21),
@@ -120,10 +119,12 @@ class _pin extends State<pin> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(60),
                                   color: isWrong == true
-                                      ? Color.fromARGB(255, 255, 0, 0)
+                                      ? const Color.fromARGB(255, 255, 0, 0)
                                       : inputPin.length >= 4
-                                          ? Color.fromARGB(255, 255, 255, 255)
-                                          : Color.fromARGB(0, 255, 254, 254),
+                                          ? const Color.fromARGB(
+                                              255, 255, 255, 255)
+                                          : const Color.fromARGB(
+                                              0, 255, 254, 254),
                                 ))),
                       ],
                     ),
@@ -136,8 +137,8 @@ class _pin extends State<pin> {
                                 width: 35,
                                 height: 2,
                                 color: isWrong == true
-                                    ? Color.fromARGB(255, 255, 0, 0)
-                                    : inputPin.length == 0
+                                    ? const Color.fromARGB(255, 255, 0, 0)
+                                    : inputPin.isEmpty
                                         ? const Color.fromARGB(
                                             255, 255, 255, 255)
                                         : const Color.fromARGB(
@@ -148,7 +149,7 @@ class _pin extends State<pin> {
                                 width: 35,
                                 height: 2,
                                 color: isWrong == true
-                                    ? Color.fromARGB(255, 255, 0, 0)
+                                    ? const Color.fromARGB(255, 255, 0, 0)
                                     : inputPin.length == 1
                                         ? const Color.fromARGB(
                                             255, 255, 255, 255)
@@ -160,7 +161,7 @@ class _pin extends State<pin> {
                                 width: 35,
                                 height: 2,
                                 color: isWrong == true
-                                    ? Color.fromARGB(255, 255, 0, 0)
+                                    ? const Color.fromARGB(255, 255, 0, 0)
                                     : inputPin.length == 2
                                         ? const Color.fromARGB(
                                             255, 255, 255, 255)
@@ -172,7 +173,7 @@ class _pin extends State<pin> {
                                 width: 35,
                                 height: 2,
                                 color: isWrong == true
-                                    ? Color.fromARGB(255, 255, 0, 0)
+                                    ? const Color.fromARGB(255, 255, 0, 0)
                                     : inputPin.length == 3
                                         ? const Color.fromARGB(
                                             255, 255, 255, 255)
@@ -195,7 +196,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -220,7 +223,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -245,7 +250,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -275,7 +282,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -300,7 +309,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -325,7 +336,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -351,7 +364,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -376,7 +391,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -401,7 +418,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -426,13 +445,15 @@ class _pin extends State<pin> {
                         TextButton(
                             onPressed: () {
                               setState(() {
-                                if (inputPin.length >= 1) {
+                                if (inputPin.isNotEmpty) {
                                   inputPin.removeLast();
                                   isWrong = false;
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -455,7 +476,9 @@ class _pin extends State<pin> {
                                 }
                               });
 
-                              print(inputPin);
+                              if (kDebugMode) {
+                                print(inputPin);
+                              }
                             },
                             child: const SizedBox(
                               child: Center(
@@ -480,9 +503,15 @@ class _pin extends State<pin> {
                                         isWrong = true;
                                       });
                                       HapticFeedback.heavyImpact();
-                                      print(["user pin ", userPin.split('')]);
-                                      print(["input pin ", inputPin.join()]);
-                                      print(isWrong);
+                                      if (kDebugMode) {
+                                        print(["user pin ", userPin.split('')]);
+                                      }
+                                      if (kDebugMode) {
+                                        print(["input pin ", inputPin.join()]);
+                                      }
+                                      if (kDebugMode) {
+                                        print(isWrong);
+                                      }
                                     } else {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
@@ -496,7 +525,7 @@ class _pin extends State<pin> {
                                   child: Icon(Icons.check,
                                       color: inputPin.length == 4
                                           ? Colors.white
-                                          : Color.fromARGB(
+                                          : const Color.fromARGB(
                                               106, 255, 255, 255))),
                               height: 40,
                               width: 20,
