@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:banking_app_2/container/auth-state.dart';
+import 'package:banking_app_2/container/pages/landingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: authState(),
+      home: landingPage(),
     );
   }
 }
