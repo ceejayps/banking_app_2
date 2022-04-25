@@ -249,8 +249,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                       const Spacer(),
                                       const Text(
                                         "Now",
-                                        style: const TextStyle(
-                                            color: Colors.white54),
+                                        style: TextStyle(color: Colors.white54),
                                       )
                                     ],
                                   )
@@ -432,7 +431,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 80,
                           ),
                         ],
