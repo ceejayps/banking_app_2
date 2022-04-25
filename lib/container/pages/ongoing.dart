@@ -21,6 +21,16 @@ class _ongoingState extends State<ongoing> {
     "3 PM",
     "4 PM",
   ];
+  List title = [
+    "Mobile App Devevelopment",
+    "Web Devevelopment",
+    "Web Devevelopment ",
+    "UI/UX Over Look",
+    "1 PM",
+    "2 PM",
+    "3 PM",
+    "4 PM",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -207,8 +217,8 @@ class _ongoingState extends State<ongoing> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            const Text(
-                                              "Mobile App Development",
+                                            Text(
+                                              title[index],
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.w800,
