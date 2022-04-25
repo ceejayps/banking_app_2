@@ -1,8 +1,4 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:slider_button/slider_button.dart';
 
 class landingPage extends StatelessWidget {
   const landingPage({Key? key}) : super(key: key);
@@ -19,32 +15,23 @@ class landingPage extends StatelessWidget {
               Color.fromARGB(255, 180, 201, 221)
             ])),
         child: Scaffold(
-            appBar: AppBar(),
-            backgroundColor: Colors.black,
-            body: Column(
-              children: [
-                SliderButton(
-                  action: () {
-                    ///Do something here
-                  },
-                  label: Text(
-                    'Slide to cancel Event',
-                    style: TextStyle(
-                        color: Color(0xff4a4a4a),
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17),
+            //appBar: AppBar(),
+            backgroundColor: Colors.transparent,
+            body: Padding(
+              padding: const EdgeInsets.all(30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Image(image: AssetImage("assets/images/u.png")),
                   ),
-                  icon: Text(
-                    'x',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 40,
-                    ),
+                  Text(
+                    "Manage your \n daily tasks",
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   ),
-                  buttonColor: Colors.black,
-                ),
-              ],
+                ],
+              ),
             )));
   }
 }
