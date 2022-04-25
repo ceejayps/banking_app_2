@@ -56,20 +56,23 @@ class _ongoingState extends State<ongoing> {
               leading: Padding(
                 padding:
                     const EdgeInsets.only(top: 7.5, bottom: 7.5, right: 15),
-                child: Container(
-                    height: 6,
-                    width: 6,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(
-                          width: 1.2,
-                          color: Color.fromARGB(68, 23, 22, 83),
-                        )),
-                    child: const Icon(
-                      Icons.arrow_back_outlined,
-                      size: 30,
-                      color: Color.fromARGB(255, 23, 22, 83),
-                    )),
+                child: InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: Container(
+                      height: 6,
+                      width: 6,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            width: 1.2,
+                            color: Color.fromARGB(68, 23, 22, 83),
+                          )),
+                      child: const Icon(
+                        Icons.arrow_back_outlined,
+                        size: 30,
+                        color: Color.fromARGB(255, 23, 22, 83),
+                      )),
+                ),
               ),
               backgroundColor: Colors.transparent,
               elevation: 0,
