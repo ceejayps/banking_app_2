@@ -1,4 +1,4 @@
-import 'dart:ui';
+// ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,6 +30,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     _controller = AnimationController(
@@ -108,7 +109,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
             ])),
         child: Stack(
           children: [
-            Image(image: AssetImage("assets/images/rings.png")),
+            const Image(image: AssetImage("assets/images/rings.png")),
             Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
@@ -130,7 +131,8 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                 leading: const IconButton(
                     onPressed: null,
                     icon: Icon(
-                      Icons.arrow_back,
+                      Icons.stacked_bar_chart_rounded,
+                      size: 30,
                       color: Colors.white,
                     )),
                 backgroundColor: Colors.transparent,
@@ -183,7 +185,7 @@ class _homepageState extends State<homepage> with TickerProviderStateMixin {
                                         .withOpacity(0.05), //color of shadow
                                     spreadRadius: 5, //spread radius
                                     blurRadius: 7, // blur radius
-                                    offset: Offset(
+                                    offset: const Offset(
                                         0, 2), // changes position of shadow
                                     //first paramerter of offset is left-right
                                     //second parameter is top to down
