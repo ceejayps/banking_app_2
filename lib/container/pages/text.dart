@@ -8,12 +8,12 @@ class bankingtest extends StatefulWidget {
 }
 
 class _bankingtestState extends State<bankingtest> {
-  Color dark = Colors.black;
-  Color light = Colors.white;
+  Color dark = Colors.white;
+  Color light = Colors.black;
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: light,
+      color: dark,
       child: Stack(
         children: [
           Column(
@@ -28,7 +28,7 @@ class _bankingtestState extends State<bankingtest> {
                         width: MediaQuery.of(context).size.width / 2,
                       ),
                       Container(
-                        color: Colors.black,
+                        color: dark,
                         height: double.infinity,
                         width: MediaQuery.of(context).size.width / 2,
                       ),
@@ -44,7 +44,7 @@ class _bankingtestState extends State<bankingtest> {
                         width: MediaQuery.of(context).size.width / 2,
                       ),
                       Container(
-                        color: Colors.black,
+                        color: dark,
                         height: double.infinity,
                         width: MediaQuery.of(context).size.width / 2,
                       )
@@ -58,7 +58,7 @@ class _bankingtestState extends State<bankingtest> {
                   flex: 25,
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black,
+                        color: dark,
                         borderRadius:
                             BorderRadius.only(bottomLeft: Radius.circular(60))),
                   )),
