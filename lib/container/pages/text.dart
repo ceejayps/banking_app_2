@@ -76,56 +76,68 @@ class _bankingtestState extends State<bankingtest> {
             backgroundColor: Colors.transparent,
             body: SafeArea(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 23),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
                       height: 20,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CircleAvatar(
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CircleAvatar(
                             radius: 26,
-                            backgroundColor: Color.fromARGB(255, 255, 96, 96)),
-                        Container(
-                          color: Colors.black12,
-                          width: 2,
-                          height: 52,
-                        ),
-                        CircleAvatar(
-                          radius: 26,
-                          backgroundColor: Colors.black12,
-                          child: CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.white,
+                            backgroundColor: Color.fromARGB(255, 255, 96, 96),
+                            child: CircleAvatar(
+                                radius: 25,
+                                backgroundColor: Colors.transparent,
+                                child: Icon(
+                                  Icons.import_export_rounded,
+                                  color: Colors.white,
+                                  size: 34,
+                                )),
                           ),
-                        ),
-                        CircleAvatar(
-                          radius: 26,
-                          backgroundColor: Colors.black12,
-                          child: CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.white,
+                          Container(
+                            color: Colors.black12,
+                            width: 2,
+                            height: 52,
                           ),
-                        ),
-                        CircleAvatar(
-                          radius: 26,
-                          backgroundColor: Colors.black12,
-                          child: CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.white,
+                          CircleAvatar(
+                            radius: 26,
+                            backgroundColor: Colors.black12,
+                            child: CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.white,
+                            ),
                           ),
-                        ),
-                      ],
+                          CircleAvatar(
+                            radius: 26,
+                            backgroundColor: Colors.black12,
+                            child: CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.white,
+                            ),
+                          ),
+                          CircleAvatar(
+                            radius: 26,
+                            backgroundColor: Colors.black12,
+                            child: CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: 30,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.width * 0.46,
+                      height: MediaQuery.of(context).size.width * 0.5,
                       decoration: BoxDecoration(
                           color: Colors.amber,
                           borderRadius: BorderRadius.circular(20)),
@@ -133,7 +145,16 @@ class _bankingtestState extends State<bankingtest> {
                     SizedBox(
                       height: 30,
                     ),
-                    Text("Quick Commands")
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
+                      child: Text(
+                        "Quick Commands",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                    Row()
                   ],
                 ),
               ),
