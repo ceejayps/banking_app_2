@@ -71,6 +71,73 @@ class _bankingtestState extends State<bankingtest> {
                             BorderRadius.only(topRight: Radius.circular(60))),
                   ))
             ],
+          ),
+          Scaffold(
+            backgroundColor: Colors.transparent,
+            body: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CircleAvatar(
+                            radius: 26,
+                            backgroundColor: Color.fromARGB(255, 255, 96, 96)),
+                        Container(
+                          color: Colors.black12,
+                          width: 2,
+                          height: 52,
+                        ),
+                        CircleAvatar(
+                          radius: 26,
+                          backgroundColor: Colors.black12,
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: Colors.white,
+                          ),
+                        ),
+                        CircleAvatar(
+                          radius: 26,
+                          backgroundColor: Colors.black12,
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: Colors.white,
+                          ),
+                        ),
+                        CircleAvatar(
+                          radius: 26,
+                          backgroundColor: Colors.black12,
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.width * 0.46,
+                      decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text("Quick Commands")
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
